@@ -5,7 +5,7 @@ import LoggedHeader from '../components/LoggedHeader';
 import MessagesPanel from '../components/MessagesPanel';
 
 export default function Home() {
-  const { isAuthenticated, logout } = useMoralis();
+  const { isAuthenticated } = useMoralis();
   if (!isAuthenticated) return <LoginScreen />
 
   return (

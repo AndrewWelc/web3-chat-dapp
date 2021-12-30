@@ -13,12 +13,12 @@ function LoggedHeader() {
                     <Image objectFit="cover" layout="fill" className="rounded-full" src={logoPic} />
                 </div>
                 <div className="col-span-4 lg:text-center text-left">
-                    <div className="relative w-48 h-48 lg:mx-auto border-green-500 border-4  rounded-full">
+                    <div className="relative lg:w-48 lg:h-48 sm:h-9 sm:w-9 lg:mx-auto border-green-500 lg:border-4 sm:border-2  rounded-full">
                         <Avatar logoutOnClick />
                     </div>
 
-                    <h1 className="text-3xl">Welcome to WelCoded dApp Chat!</h1>
-                    <h2 className="text-3xl truncate"><b>Logged as</b>: {user.getUsername()}</h2>
+                    <h1 className="lg:text-3xl sm:text-sm">Welcome to WelCoded dApp Chat!</h1>
+                    <h2 className="lg:text-3xl sm:text-sm truncate"><b>Logged as</b>: {user.getUsername()}</h2>
 
                     <ChangeUsername />
                 </div>

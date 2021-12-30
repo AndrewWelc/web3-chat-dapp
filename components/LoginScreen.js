@@ -14,8 +14,8 @@ function LoginScreen() {
             <h1>Login screen</h1>
             <div className="flex flex-col absolute z-50 h-4/6 items-center justify-center w-full space-y-6">
                 <Image src={logoPic} className="object-cover rounded-full" width={200} height={200} />
-                <button onClick={authenticate} className="bg-green-500 rounded-lg p-5 font-bold animate-bounce text-yellow-50">Login to the APP</button>
-                <button onClick={loginWithWalletConnect} className="bg-green-500 rounded-lg p-5 font-bold animate-bounce text-yellow-50">Login via WalletConnect</button>
+                <button onClick={authenticate} className="bg-green-500 rounded-lg p-5 font-bold hover:animate-pulse text-yellow-50">Login via Default Provider</button>
+                <button onClick={loginWithWalletConnect} className="bg-cyan-500 rounded-lg p-5 font-bold hover:animate-pulse text-yellow-50">Login via WalletConnect</button>
             </div>
 
             <div className="w-full h-screen">
