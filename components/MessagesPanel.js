@@ -38,9 +38,9 @@ function MessagesPanel() {
             <SendMessage endOfMsgRef={endOfMsgRef} />
         </div>
         
-        <div className="text-gray-500 mt-5 text-center"
+        <div className="text-zinc-300 italic mt-5 text-center"
         ref={endOfMsgRef}>
-            <p>{user.getUsername()}, you are up to date.</p>
+            <p>{user.getUsername()}, you are up to date. 🤝</p>
         </div>
         </div>
     )

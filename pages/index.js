@@ -14,12 +14,11 @@ export default function Home() {
         <title>WelCoded Web3 Chat</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-    
+
       <div className="max-w-screen-2xl mx-auto">
-      <LoggedHeader />
-      <MessagesPanel />
+        <LoggedHeader />
+        <MessagesPanel />
       </div>
-    <button onClick={logout}>Logout</button>
     </div>
   )
 }
