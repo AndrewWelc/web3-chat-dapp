@@ -18,7 +18,7 @@ function LoggedHeader() {
                     </div>
 
                     <h1 className="text-3xl">Welcome to WelCoded dApp Chat!</h1>
-                    <h2 className="text-5xl truncate"><b>Logged as</b>: {user.getUsername()}</h2>
+                    <h2 className="text-3xl truncate"><b>Logged as</b>: {user.getUsername()}</h2>
 
                     <ChangeUsername />
                 </div>
