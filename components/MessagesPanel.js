@@ -21,27 +21,26 @@ function MessagesPanel() {
     );
 
     console.log(data);
-    
-    return (
-     
-        <div className="pb-56">
-        <div className="my-5">
-            <ByMoralis style={{marginRight: 'auto', marginLeft: 'auto'}} variant="dark"/>
-        </div>
-        <div className="p-4 space-y-10">
-            {data.map(message => (
-                <SingleMessage key={message.id} message={message} />
-            ))}
-        </div>
 
-        <div className="flex justify-center">
-            <SendMessage endOfMsgRef={endOfMsgRef} />
-        </div>
-        
-        <div className="text-zinc-300 italic mt-5 text-center"
-        ref={endOfMsgRef}>
-            <p>{user.getUsername()}, you are up to date. 🤝</p>
-        </div>
+    return (
+
+        <div className="pb-56">
+            <div className="my-5">
+                <ByMoralis style={{ marginRight: 'auto', marginLeft: 'auto' }} variant="dark" />
+            </div>
+            <div className="p-4 space-y-10">
+                {data.map(message => (
+                    <SingleMessage key={message.id} message={message} />
+                ))}
+            </div>
+
+            <div className="flex justify-center">
+                <SendMessage endOfMsgRef={endOfMsgRef} />
+            </div>
+
+            <div className="text-zinc-300 italic mt-5 text-center">
+                <p ref={endOfMsgRef}>{user.getUsername()}, you are up to date. 🤝</p>
+            </div>
         </div>
     )
 }
