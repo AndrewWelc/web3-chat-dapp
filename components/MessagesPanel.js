@@ -25,7 +25,7 @@ function MessagesPanel() {
     return (
 
         <div className="pb-56">
-            <div className="lg:my-5 lg:flex sm:hidden ">
+            <div className="hidden lg:my-5 lg:flex">
                 <ByMoralis style={{ marginRight: 'auto', marginLeft: 'auto' }} variant="dark" />
             </div>
             <div className="p-4 space-y-10">
