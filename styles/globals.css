@@ -31,3 +31,7 @@
     --tw-border-opacity: 1;
     border-color: rgb(41 82 227 / var(--tw-border-opacity));
 }
+
+.text-custom-blue {
+    -webkit-text-fill-color: white;
+}
