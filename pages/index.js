@@ -9,7 +9,7 @@ export default function Home() {
   if (!isAuthenticated) return <LoginScreen />
 
   return (
-    <div className="h-screen overflow-y-scroll bg-gradient-to-b from-black to-emerald-900 overflow-hidden">
+    <div className="h-screen overflow-y-scroll gradient-main-bg overflow-hidden">
       <Head>
         <title>WelCoded Web3 Chat</title>
         <link rel="icon" href="/favicon.ico" />
