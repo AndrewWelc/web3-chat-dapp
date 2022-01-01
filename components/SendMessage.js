@@ -22,7 +22,7 @@ function SendMessage({endOfMsgRef}) {
         }).then((message) => {
             // msg sent successfully.
         }, (error) => {
-            console.log(error.message);
+            // TODO: implement error modal
         }
         )
 
