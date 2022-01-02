@@ -11,7 +11,7 @@ function MessagesPanel() {
 
     const { user } = useMoralis();
     const endOfMsgRef = useRef(null);
-    const { data, loading, error } = useMoralisQuery(
+    const { data, isLoading, error } = useMoralisQuery(
         'Messages',
         (query) => query.ascending('createdAt').greaterThan('createdAt', new Date(Date.now() - 1000 * 60 * LAST_MSGS_MINUTES)),
         [],
@@ -20,6 +20,9 @@ function MessagesPanel() {
         }
     );
 
+        if (data && endOfMsgRef.current) {
+            endOfMsgRef.current.scrollIntoView({behavior: 'smooth'});
+        }
 
     return (
 
@@ -37,7 +40,7 @@ function MessagesPanel() {
                 <SendMessage endOfMsgRef={endOfMsgRef} />
             </div>
 
-            <div className="text-zinc-300 italic mt-5 text-center">
+            <div className="text-zinc-300 italic mt-10 text-center animate-pulse opacity-75">
                 <p ref={endOfMsgRef}>{user.getUsername()}, you are up to date. 🤝</p>
             </div>
         </div>

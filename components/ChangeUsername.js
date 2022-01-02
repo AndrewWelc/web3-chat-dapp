@@ -2,10 +2,10 @@ import { useMoralis } from "react-moralis"
 
 function ChangeUsername() {
 
-    const { setUserData, user, isUserUpdating, useError} = useMoralis();
+    const { setUserData, user, isUserUpdating} = useMoralis();
 
     const setUserName = () => {
-        const username = prompt(`Your current username is: ${user.getUsername()}. Enter new UserName`);
+        const username = prompt(`Your current username is: ${user.getUsername()}. Enter new name`);
 
         if (!username) return;
 
@@ -14,8 +14,9 @@ function ChangeUsername() {
 
     return (
         <div className="text-sm absolute top-5 right-5 text-custom-blue">
-            <button disabled={isUserUpdating} className="hover:text-green-800"
-            onClick={setUserName}>Change username!</button>
+            <button disabled={isUserUpdating} className="btn-outline-primary transition duration-300 ease-in-out focus:outline-none focus:shadow-outline border 
+            border-[#9f85ff] hover:bg-[#9f85ff] text-[#9f85ff] hover:text-white font-normal py-2 px-2 rounded"
+            onClick={setUserName}>Change name</button>
         </div>
     )
 }
