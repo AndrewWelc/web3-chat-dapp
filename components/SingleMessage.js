@@ -2,14 +2,14 @@ import { useMoralis } from 'react-moralis';
 import Avatar from './Avatar';
 import TimeAgo from 'timeago-react';
 
-function SingleMessage({ message }) {
+const SingleMessage = ({ message }) => {
     const { user } = useMoralis();
     const isCurrentUserMsg = message.get('ethAddress') === user.get('ethAddress');
     return (
         <div className={`items-end flex space-x-2 relative ${isCurrentUserMsg && 'justify-end'}`}>
 
             <div className={`h-8 w-8 relative ${isCurrentUserMsg && 'order-last ml-2'}`}>
-                <Avatar username={message.get('username')} />
+                <Avatar isCurrentUser={isCurrentUserMsg} username={message.get('username')} />
             </div>
             <div className={`flex p-3 rounded-lg text-[#f9f7ff] space-x-4 ${isCurrentUserMsg ? 'rounded-br-none bg-[#9f85ff]' : 'rounded-bl-none bg-[#383152]'}`}>
                 <p>
@@ -26,4 +26,4 @@ function SingleMessage({ message }) {
     )
 }
 
-export default SingleMessage
+export default SingleMessage;

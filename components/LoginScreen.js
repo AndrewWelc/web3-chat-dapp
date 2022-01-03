@@ -2,7 +2,7 @@ import Image from "next/image";
 import logoPic from "../public/images/welcoded-logo.png";
 import { useMoralis } from "react-moralis";
 
-function LoginScreen() {
+const LoginScreen = () => {
     const { authenticate } = useMoralis();
 
     const loginWithWalletConnect = () => {
@@ -20,4 +20,4 @@ function LoginScreen() {
     )
 }
 
-export default LoginScreen
+export default LoginScreen;
