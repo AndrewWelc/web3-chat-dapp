@@ -3,11 +3,11 @@ import { useRef } from "react";
 import SendMessage from "./SendMessage";
 import SingleMessage from "./SingleMessage";
 
-// show msgs from last 10 mins
-const LAST_MSGS_MINUTES = 10;
+// show msgs from last 30 mins
+const LAST_MSGS_MINUTES = 30;
 
 
-function MessagesPanel() {
+const MessagesPanel = () => {
 
     const { user } = useMoralis();
     const endOfMsgRef = useRef(null);
@@ -27,9 +27,6 @@ function MessagesPanel() {
     return (
 
         <div className="pb-56">
-            <div className="hidden lg:my-5 lg:flex">
-                <ByMoralis style={{ marginRight: 'auto', marginLeft: 'auto' }} variant="dark" />
-            </div>
             <div className="p-4 space-y-10">
                 {data.map(message => (
                     <SingleMessage key={message.id} message={message} />
@@ -42,9 +39,10 @@ function MessagesPanel() {
 
             <div className="text-zinc-300 italic mt-10 text-center animate-pulse opacity-75">
                 <p ref={endOfMsgRef}>{user.getUsername()}, you are up to date. 🤝</p>
+                <p>Your ETH address is: {user.get("ethAddress")}</p>
             </div>
         </div>
     )
 }
 
-export default MessagesPanel
+export default MessagesPanel;

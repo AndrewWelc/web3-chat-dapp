@@ -1,7 +1,7 @@
 import '../styles/globals.css';
 import { MoralisProvider } from "react-moralis";
 
-function MyApp({ Component, pageProps }) {
+const ChatApp = ({ Component, pageProps }) => {
   return (
     <MoralisProvider appId={process.env.NEXT_PUBLIC_MORALIS_APP_ID} serverUrl={process.env.NEXT_PUBLIC_MORALIS_SERVER_URL}>
       <Component {...pageProps} />
@@ -9,4 +9,4 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-export default MyApp
+export default ChatApp;

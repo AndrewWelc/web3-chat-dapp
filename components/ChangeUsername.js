@@ -1,6 +1,6 @@
 import { useMoralis } from "react-moralis"
 
-function ChangeUsername() {
+const ChangeUsername = () => {
 
     const { setUserData, user, isUserUpdating} = useMoralis();
 
@@ -21,4 +21,4 @@ function ChangeUsername() {
     )
 }
 
-export default ChangeUsername
+export default ChangeUsername;

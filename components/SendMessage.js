@@ -1,8 +1,7 @@
 import { useState } from "react"
 import { useMoralis } from "react-moralis"
-import MessagesPanel from "./MessagesPanel";
 
-function SendMessage({endOfMsgRef}) {
+const SendMessage = ({endOfMsgRef}) => {
 
     const { user, Moralis } = useMoralis();
     const [ message, setMessage ] = useState("");
@@ -41,4 +40,4 @@ function SendMessage({endOfMsgRef}) {
     )
 }
 
-export default SendMessage
+export default SendMessage;
